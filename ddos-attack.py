@@ -24,6 +24,7 @@ def bot_hammering(url):
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
 			print("\033[94mbot is hammering...\033[0m")
 	except:
+		time.sleep()
 
 def down_it(item):
 	try:
