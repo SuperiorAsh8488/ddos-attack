@@ -135,7 +135,7 @@ if __name__ == '__main__':
 		s.connect((host,int(port)))
 		s.settimeout(1)
 	except socket.error as e:
-		print("\033[91mserver ip ve port'u kontrol edin\033[0m")
+		print("\033[91mserver ip ve port'u kontrol edin Hata: \033[0m",e)
 		usage()
 	while True:
 		for i in range(int(thr)):
