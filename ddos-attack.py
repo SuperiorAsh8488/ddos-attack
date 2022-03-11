@@ -140,7 +140,7 @@ if __name__ == '__main__':
 		#tasking
 		item = 0
 		while True:
-			if (item>1): # for no memory crash
+			if (item>0): # for no memory crash
 				item=0
 				time.sleep(0)
 			item = item + 1
