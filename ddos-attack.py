@@ -43,7 +43,7 @@ def down_it(item):
 			time.sleep(0)
 	except socket.error as e:
 		print("\033[91mno Bağlantı kurulamıyor! \033[0m")
-		print("\033[91m",e,"\033[0m")
+		print(e)
 		time.sleep(0)
 
 
