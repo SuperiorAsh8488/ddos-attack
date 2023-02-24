@@ -1,9 +1,16 @@
 # DDoS Attack
+Termux uygulaması [F-Droid](https://f-droid.org/packages/com.termux/) üzerinden indirilebilir.
+
 Not: Sorumluluk bizde değildir!
 
 Gerekli bağımlılıklar/paketler:
 - git
-- python
+- python3
+
+Bunları yüklemek için Termux'a şu komutları yazın:
+
+    pkg update
+    pkg install git python3 -y
 
 ### 1. Varsa *ddos-attack* klasörünü sil
 
